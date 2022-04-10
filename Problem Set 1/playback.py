@@ -10,7 +10,7 @@ def get_user_input():
     return input("What would you like me to slow down? ").strip()
 
 
-# Returns input in lowercase
+# Returns input, but slower
 def slow_playback(slow):
     return slow.replace(" ", "...")
 

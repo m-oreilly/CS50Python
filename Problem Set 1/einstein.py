@@ -1,11 +1,12 @@
 def main():
-    # Set varaible for the speed of light
+    # Set c for the speed of light
     c = 300000000
 
+    # Ask for Mass, Calculate energy
     m = get_user_input()
     e = calc_joules(m, c)
 
-    # Print the Joules back to the user
+    # Print the Energy back to the user
     print("E:", e)
 
 

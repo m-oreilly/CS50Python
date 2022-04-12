@@ -1,4 +1,5 @@
 def main():
+    # Define variables to improve reuse of codebase
     the_great_question = "What is the Answer to the Great Question of Life, the Universe, and Everything? "
     the_answers = ["42", "forty two"]
 
@@ -18,7 +19,7 @@ def get_answer_to_great_question(question):
     return input(question).strip().replace("-", " ").lower()
 
 
-# Check for equality
+# Check answer is in list of answers
 def check_guess(guess, answer):
     return guess in answer
 

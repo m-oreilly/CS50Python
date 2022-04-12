@@ -10,7 +10,7 @@ def main():
             print("Yes")
         else:
             print("No")
-            print(x)
+
 
 
 # Ask the great question

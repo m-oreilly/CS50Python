@@ -2,9 +2,9 @@ def main():
 
     # Start loop, to repeat until correct answer is given
     while True:
-        users_answer = great_question_answer()
+        users_guess = answer_to_great_question()
 
-        if check_for_equality(users_answer):
+        if check_for_equality(users_guess):
             print("Yes")
             break
         else:
@@ -12,14 +12,14 @@ def main():
 
 
 # Ask the great question
-def great_question_answer():
+def answer_to_great_question():
     return input("What is the Answer to the Great Question of Life, "
                  "the Universe, and Everything? ").strip().replace("-", " ").lower()
 
 
 # Check for equality
-def check_for_equality(clean_answer):
-    return clean_answer == "42" or clean_answer == "forty two"
+def check_for_equality(guess):
+    return guess == "42" or guess == "forty two"
 
 
 # Call main to run

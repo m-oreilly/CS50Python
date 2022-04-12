@@ -11,6 +11,7 @@ def main():
 
     # Passes in the tellers greeting to be checked and if true prints appropriate redress amount
     # Else returns false and provides the large redress
+    # Could improve formatting in future with {variable:.2f}
     if check_for_good_greeting(tellers_greeting, good_greeting):
         print(f"${no_redress}")
     elif check_for_ok_greeting(tellers_greeting, ok_greeting):

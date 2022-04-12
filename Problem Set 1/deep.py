@@ -12,7 +12,6 @@ def main():
             print("No")
 
 
-
 # Ask the great question
 def great_question_answer():
     return input("What is the Answer to the Great Question of Life, the Universe, and Everything? ")

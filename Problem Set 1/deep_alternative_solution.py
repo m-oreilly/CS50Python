@@ -1,10 +1,11 @@
 def main():
+    the_answers = ["42", "forty two"]
 
     # Start loop, to repeat until correct answer is given
     while True:
         users_guess = answer_to_great_question()
 
-        if check_for_equality(users_guess):
+        if check_for_equality(users_guess, the_answers):
             print("Yes")
             break
         else:
@@ -18,8 +19,8 @@ def answer_to_great_question():
 
 
 # Check for equality
-def check_for_equality(guess):
-    return guess == "42" or guess == "forty two"
+def check_for_equality(guess, answer):
+    return guess in answer
 
 
 # Call main to run

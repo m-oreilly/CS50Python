@@ -7,7 +7,7 @@ def main():
 
 # Returns user input as str
 def get_user_input():
-    return input("What shall we say with our indoor voice?: ")
+    return input("What shall we say with our indoor.py voice?: ")
 
 
 # Returns input in lowercase

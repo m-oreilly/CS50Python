@@ -4,9 +4,9 @@
 
 # Main
 def main():
-    time = ask_for_the_time()
-    converted_time = convert(time)
-    meal = which_meal_time(converted_time)
+    users_time = ask_for_the_time()
+    converted_time = convert(users_time)
+    meal = is_it_meal_time(converted_time)
     if meal is not None:
         print(meal)
 
@@ -33,7 +33,7 @@ def convert(time):
 
 
 # Takes in time as float, returns if its breakfast, lunch, or dinner
-def which_meal_time(time_to_check):
+def is_it_meal_time(time_to_check):
     if 7 <= time_to_check <= 8:
         return "breakfast time"
     elif 12 <= time_to_check <= 13:

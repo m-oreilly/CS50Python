@@ -1,28 +1,22 @@
-# If up for a challenge, optionally add support for 12-hour times,
-# allowing the user to input times in these formats too:
-# #:## a.m. and ##:## a.m.
-# #:## p.m. and ##:## p.m.
-#  7:00 and 8:00, lunch between 12:00 and 13:00, and dinner between 18:00 and 19:00.
+# Program will ask user to for time (12/24 hr format)
+# Will confirm if it's a meal time,  7:00 and 8:00, lunch between 12:00 and 13:00, and dinner between 18:00 and 19:00
+# If not a meal time, end program
 
-what_time = "What time is it? "
-breakfast = "breakfast time"
-lunch = "lunch time"
-dinner = "dinner time"
-
-
+# Main
 def main():
-    while True:
-        time = ask_for_the_time(what_time)
-        converted_time = convert(time)
-        meal = which_meal_time(converted_time)
-        if meal is not None:
-            print(meal)
+    time = ask_for_the_time()
+    converted_time = convert(time)
+    meal = which_meal_time(converted_time)
+    if meal is not None:
+        print(meal)
 
 
-def ask_for_the_time(question):
-    return input(question).lower().strip().replace(".", "").replace(" ", ":")
+# Ask question and returns formatted users answer
+def ask_for_the_time():
+    return input("What time is it? ").lower().strip().replace(".", "").replace(" ", ":")
 
 
+# Takes in time in 12, or 24 hr formats and returns time as float
 def convert(time):
     if time.endswith("am"):
         hours, minutes, am = time.split(":")
@@ -38,13 +32,14 @@ def convert(time):
     return converted_time
 
 
+# Takes in time as float, returns if its breakfast, lunch, or dinner
 def which_meal_time(time_to_check):
     if 7 <= time_to_check <= 8:
-        return breakfast
+        return "breakfast time"
     elif 12 <= time_to_check <= 13:
-        return lunch
+        return "lunch time"
     elif 18 <= time_to_check <= 19:
-        return dinner
+        return "dinner time"
     else:
         return None
 

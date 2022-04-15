@@ -3,6 +3,7 @@ def main():
     file = input("File name: ").lower().strip()
     print(file_type(file))
 
+
 # Pass in file name and return file type
 def file_type(to_check):
     if to_check.endswith(".gif"):
